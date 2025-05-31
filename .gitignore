@@ -1,0 +1,6 @@
+yolo_model/train/
+__pycache__/
+*.pyc
+.env
+.vscode/
+*.log
