@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFCF9"
+    android:id="@+id/main">
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav_container"
+        android:paddingBottom="50dp" />
+
+    <FrameLayout
+        android:id="@+id/bottom_nav_container"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary"
+        android:elevation="8dp">
+
+        <!-- 3 slot: kiri - tengah (spacer) - kanan -->
+        <LinearLayout
+            android:id="@+id/nav_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3"
+            android:paddingHorizontal="32dp">
+
+            <!-- Tombol kiri -->
+            <ImageButton
+                android:id="@+id/btn_dashboard"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_home_24"
+                android:scaleType="fitCenter"
+                android:padding="8dp"
+                android:contentDescription="Dashboard"
+                app:tint="@color/white" />
+
+            <!-- Spacer tengah untuk FAB -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!-- Tombol kanan -->
+            <ImageButton
+                android:id="@+id/btn_profile"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/baseline_auto_graph_24"
+                android:contentDescription="Profil"
+                android:scaleType="fitCenter"
+                android:padding="8dp"
+                app:tint="@color/white" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- FloatingActionButton di tengah -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/baseline_camera_enhance_24"
+        app:backgroundTint="@android:color/white"
+        android:contentDescription="@string/scan_me"
+        app:elevation="10dp"
+        app:tint="@color/primary"
+        app:useCompatPadding="false"
+        app:fabCustomSize="90dp"
+        app:maxImageSize="56dp"
+        app:shapeAppearanceOverlay="@style/MyFabShapeAppearance" />
+</RelativeLayout>
