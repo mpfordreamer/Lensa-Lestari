@@ -1,0 +1,10 @@
+flask
+torch
+torchvision
+faiss-cpu
+onnxruntime
+numpy
+pandas
+pillow
+matplotlib
+tqdm
