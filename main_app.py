@@ -24,7 +24,7 @@ def index():
 
 # ========== LOAD MODEL ==========
 
-print("[🔄] Loading YOLOv8...")
+print("[🔄] Loading YOLOv12n...")
 yolo_model = YOLO("yolo_model/model/best_yolo.onnx", task="detect")
 print("[✔] YOLOv8 loaded")
 
