@@ -1,0 +1,9 @@
+flask
+onnxruntime
+numpy
+pillow
+faiss-cpu
+torchvision
+opencv-python
+ultralytics
+pyngrok
