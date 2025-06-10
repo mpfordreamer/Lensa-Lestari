@@ -1,7 +1,5 @@
 # Lensa Lestari Overview
 
----
-
 ## 💻 Tumpukan Teknologi (Tech Stack)
 
 - **Backend**: **Python** dengan framework **Flask**.
@@ -9,8 +7,6 @@
 - **Modeling & Machine Learning**: **Python**, **PyTorch**, **TensorFlow**, **Scikit-learn**.
 - **Database**: MySQL.
 - **Deployment**: -
-
----
 
 ## 🚀 Mulai (Getting Started)
 
@@ -74,8 +70,6 @@ Pastikan Anda telah menginstal perangkat lunak berikut:
     - Biarkan Android Studio menyinkronkan semua dependensi (proses Gradle).
     - Jalankan aplikasi pada emulator atau perangkat Android fisik.
 
----
-
 ### 🧠 Detail Model AI
 
 Kami menggunakan pendekatan *multi-model* dalam format `.onnx` untuk mencapai fungsionalitas yang komprehensif, dari deteksi cepat hingga identifikasi detail.
@@ -100,8 +94,6 @@ Model-model pra-terlatih dalam format `.onnx` yang kami gunakan dapat diakses la
 
 Pastikan path ke model di dalam kode backend sudah sesuai dengan lokasi Anda menyimpan model.
 
----
-
 ## 📱 Cara Menggunakan Aplikasi
 
 Alur penggunaan aplikasi dirancang untuk memanfaatkan ketiga model secara berurutan:
@@ -120,8 +112,6 @@ Proyek "Lensa Lestari" dikembangkan oleh tim LAI25-SM059:
 - **I Kadek Ade Indra Swadinata** - (Backend Developer & ML Support)
 - **I Putu Wira Budhi Guna Ariyasa** - (Mobile App Developer)
 - **Rizal Teddyansyah** - (Data Engineer)
-
----
 
 ## ⚖️ Lisensi
 
