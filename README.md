@@ -18,7 +18,6 @@ Pastikan Anda telah menginstal perangkat lunak berikut:
 - [Git](https://git-scm.com/)
 - [Python 3.8+](https://www.python.org/)
 - [Android Studio](https://developer.android.com/studio)
-- [Docker](https://www.docker.com/) (Opsional, untuk deployment)
 
 ### Instalasi Backend
 
