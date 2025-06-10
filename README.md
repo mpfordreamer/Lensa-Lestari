@@ -1,6 +1,6 @@
 # Lensa Lestari Overview
 
-## 💻 Tumpukan Teknologi (Tech Stack)
+## 💻 Teknologi yang digunakan
 
 - **Backend**: **Python** dengan framework **Flask**.
 - **Aplikasi Mobile**: **Kotlin** (Android Native).
