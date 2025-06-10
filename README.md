@@ -105,7 +105,7 @@ Alur penggunaan aplikasi dirancang untuk memanfaatkan ketiga model secara beruru
 
 ## 👥 Tim Pengembang
 
-Proyek "Lensa Lestari" dikembangkan oleh tim LAI25-SM059:
+Proyek "Lensa Lestari" dikembangkan oleh tim Laskar AI LAI25-SM059:
 
 - **I Dewa Gede Mahesta Parawangsa** - (Lead ML Engineer)
 - **I Kadek Ade Indra Swadinata** - (Backend Developer & ML Support)
