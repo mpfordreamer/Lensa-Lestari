@@ -1,14 +1,17 @@
 # Lensa Lestari Overview
 
-## 💻 Teknologi yang digunakan
+## 💻 Tech Stack
 
-- **Backend**: **Python** dengan framework **Flask**.
-- **Aplikasi Mobile**: **Kotlin** (Android Native).
-- **Modeling & Machine Learning**: **Python**, **PyTorch**, **TensorFlow**, **Scikit-learn**.
-- **Database**: MySQL.
-- **Deployment**: -
+| Step | Library / Tools |
+| :--- | :--- |
+| **Exploratory Data Analysis** | ![Pandas](https://img.shields.io/badge/pandas-%235E55D3.svg?style=for-the-badge&logo=pandas&logoColor=white) ![NumPy](https://img.shields.io/badge/numpy-%234D77CF.svg?style=for-the-badge&logo=numpy&logoColor=white) ![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black) |
+| **Modeling** | ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![Scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white) |
+| **Backend** | ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) |
+| **Mobile App** | ![Kotlin](https://img.shields.io/badge/kotlin-%237F52FF.svg?style=for-the-badge&logo=kotlin&logoColor=white) ![Android Studio](https://img.shields.io/badge/Android%20Studio-3DDC84.svg?style=for-the-badge&logo=android-studio&logoColor=white) |
+| **Database** | ![MySQL](https://img.shields.io/badge/mysql-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) |
+| **Deployment** | Apk |
 
-## 🚀 Mulai (Getting Started)
+##  Mulai (Getting Started)
 
 Ikuti langkah-langkah di bawah ini untuk menjalankan proyek Lensa Lestari di lingkungan lokal Anda.
 
@@ -69,7 +72,7 @@ Pastikan Anda telah menginstal perangkat lunak berikut:
     - Biarkan Android Studio menyinkronkan semua dependensi (proses Gradle).
     - Jalankan aplikasi pada emulator atau perangkat Android fisik.
 
-### 🧠 Detail Model AI
+### Detail Model AI
 
 Kami menggunakan pendekatan *multi-model* dalam format `.onnx` untuk mencapai fungsionalitas yang komprehensif, dari deteksi cepat hingga identifikasi detail.
 
@@ -93,7 +96,7 @@ Model-model pra-terlatih dalam format `.onnx` yang kami gunakan dapat diakses la
 
 Pastikan path ke model di dalam kode backend sudah sesuai dengan lokasi Anda menyimpan model.
 
-## 📱 Cara Menggunakan Aplikasi
+## Cara Menggunakan Aplikasi
 
 Alur penggunaan aplikasi dirancang untuk memanfaatkan ketiga model secara berurutan:
 
@@ -103,7 +106,7 @@ Alur penggunaan aplikasi dirancang untuk memanfaatkan ketiga model secara beruru
 4.  **Lihat Info Lengkap & Edukasi**: Hasil analisis detail, dampak lingkungan, dan cara pengelolaan yang benar akan ditampilkan.
 5.  **Kumpulkan Poin**: Setiap pemindaian yang berhasil akan memberikan Anda poin sebagai bentuk apresiasi
 
-## 👥 Tim Pengembang
+## Tim Pengembang
 
 Proyek "Lensa Lestari" dikembangkan oleh tim Laskar AI LAI25-SM059:
 
@@ -111,7 +114,3 @@ Proyek "Lensa Lestari" dikembangkan oleh tim Laskar AI LAI25-SM059:
 - **I Kadek Ade Indra Swadinata** - (Backend Developer & ML Support)
 - **I Putu Wira Budhi Guna Ariyasa** - (Mobile App Developer)
 - **Rizal Teddyansyah** - (Data Engineer)
-
-## ⚖️ Lisensi
-
-Proyek ini dilisensikan di bawah **MIT License**. Lihat file `LICENSE` untuk detail lebih lanjut.
