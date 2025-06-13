@@ -1,0 +1,31 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Flask/Migrate database migration files
+migrations/versions/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pyngrok logs and config (opsional, bisa hapus kalau perlu)
+.ngrok2/
+ngrok.yml
+
+# VSCode settings
+.vscode/
+
+# Log files
+*.log
