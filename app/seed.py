@@ -1,4 +1,4 @@
-from models import RewardAction
+from app.models import RewardAction
 
 def seed_reward_actions(db):
     """Seed tabel RewardAction hanya jika masih kosong."""

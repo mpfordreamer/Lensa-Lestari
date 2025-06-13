@@ -6,9 +6,9 @@ from flask_jwt_extended import JWTManager
 from flask_migrate import Migrate
 
 
-from config import Config
-from models import db
-from seed import seed_reward_actions
+from app.config import Config
+from app.models import db
+from app.seed import seed_reward_actions
 from controllers.auth_controller import auth_bp
 from controllers.reward_controller import reward_bp
 from controllers.model_controller import model_bp

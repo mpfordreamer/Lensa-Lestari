@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify, send_from_directory
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from models import db, User, UserReward, ScanHistory
+from app.models import db, User, UserReward, ScanHistory
 from datetime import datetime, timezone, timedelta
 
 import numpy as np
