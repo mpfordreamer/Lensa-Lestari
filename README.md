@@ -11,25 +11,76 @@
 | **Database** | ![MySQL](https://img.shields.io/badge/mysql-%234479A1.svg?style=for-the-badge&logo=mysql&logoColor=white) |
 | **Deployment** | Apk |
 
-##  Mulai (Getting Started)
+## 🚀 Cara Menjalankan Proyek
 
-Ikuti langkah-langkah di bawah ini untuk menjalankan proyek Lensa Lestari di lingkungan lokal Anda.
+Ada dua cara untuk menjalankan proyek ini:
+1.  **Menjalankan Aplikasi Siap Pakai (APK):** Cara termudah untuk mencoba fungsionalitas aplikasi secara langsung.
+2.  **Menjalankan dari Kode Sumber (Development):** Untuk Anda yang ingin melakukan pengembangan atau modifikasi.
 
-### Prasyarat
+---
 
-Pastikan Anda telah menginstal perangkat lunak berikut:
-- [Git](https://git-scm.com/)
-- [Python 3.8+](https://www.python.org/)
-- [Android Studio](https://developer.android.com/studio)
+### 📱 Menjalankan Aplikasi Siap Pakai (APK)
 
-### Instalasi Backend
+Ikuti langkah-langkah ini untuk menghubungkan aplikasi mobile dengan backend di komputer lokal Anda.
+
+#### Prasyarat
+
+-   [Ngrok](https://ngrok.com/download) terinstal di komputer Anda. Anda perlu mendaftar untuk mendapatkan *authtoken*.
+-   Perangkat Android untuk menginstal aplikasi.
+
+#### Langkah 1: Jalankan Server Backend
+
+Pastikan Anda telah mengikuti langkah-langkah instalasi backend di bawah ini (pada bagian "Menjalankan dari Kode Sumber") hingga server berhasil berjalan.
+```bash
+# Di dalam direktori /backend
+flask run
+```
+Biarkan server ini tetap berjalan di terminal Anda.
+
+#### Langkah 2: Dapatkan URL Publik dengan Ngrok
+
+1.  Buka terminal **baru**.
+2.  Jalankan Ngrok untuk mengekspos port 5000 (port default Flask):
+    ```bash
+    ngrok http 5000
+    ```
+3.  Ngrok akan menampilkan sebuah URL publik berawalan `https`. **Salin URL HTTPS tersebut**, contohnya: `https://xxxx-xxxx-xxxx.ngrok-free.app`.
+
+#### Langkah 3: Instal dan Konfigurasi Aplikasi
+
+1.  **Unduh file APK:**
+    Akses dan unduh file `Lensa_Lestari.apk` dari tautan berikut:
+    - **[Google Drive: Unduh Lensa Lestari APK](https://drive.google.com/drive/folders/10__73cwhMFksvD56PxD128PROAZ7XY6a?usp=sharing)**
+
+2.  **Instal di Perangkat Android:**
+    Pindahkan file APK ke perangkat Android Anda dan lakukan instalasi. (Anda mungkin perlu mengizinkan "Instalasi dari sumber tidak dikenal" di pengaturan keamanan ponsel Anda).
+
+3.  **Hubungkan ke Backend:**
+    - Saat pertama kali membuka aplikasi, Anda akan diminta memasukkan alamat server.
+    - **Tempel (paste) URL HTTPS dari Ngrok** yang telah Anda salin sebelumnya.
+    - Simpan konfigurasi.
+
+Kini, aplikasi Anda siap digunakan dan sudah terhubung dengan database serta model AI di backend!
+
+---
+
+### 💻 Menjalankan dari Kode Sumber (Development)
+
+Ikuti langkah-langkah di bawah ini untuk menjalankan proyek Lensa Lestari di lingkungan lokal Anda untuk tujuan pengembangan.
+
+#### Prasyarat
+
+-   [Git](https://git-scm.com/)
+-   [Python 3.8+](https://www.python.org/)
+-   [Android Studio](https://developer.android.com/studio)
+
+#### Instalasi Backend
 
 1.  **Clone repositori ini:**
     ```bash
     git clone https://github.com/mpfordreamer/Lensa-Lestari.git
     cd Lensa-Lestari/backend
     ```
-
 2.  **Buat dan aktifkan virtual environment:**
     ```bash
     python -m venv venv
@@ -37,18 +88,15 @@ Pastikan Anda telah menginstal perangkat lunak berikut:
     # atau
     .\venv\Scripts\activate  # Untuk Windows
     ```
-
 3.  **Instal semua dependensi:**
     ```bash
     pip install -r requirements.txt
     ```
-
 4.  **Siapkan file environment:**
     Buat file `.env` di dalam folder `backend/` dan isi dengan konfigurasi yang diperlukan, seperti koneksi database.
     ```env
     DATABASE_URL="your_database_connection_string"
     ```
-
 5.  **Jalankan server backend:**
     ```bash
     flask run
@@ -57,38 +105,36 @@ Pastikan Anda telah menginstal perangkat lunak berikut:
     ```
     Server akan berjalan di `http://127.0.0.1:5000`.
 
-### Instalasi Aplikasi Mobile (Android)
+#### Instalasi Aplikasi Mobile (Android)
 
 1.  **Buka proyek di Android Studio:**
-    - Buka Android Studio.
-    - Pilih `Open an Existing Project`.
-    - Arahkan ke folder `Lensa-Lestari/mobile-app` (atau nama folder aplikasi Anda).
-
+    -   Buka Android Studio.
+    -   Pilih `Open an Existing Project`.
+    -   Arahkan ke folder `Lensa-Lestari/mobile-app` (atau nama folder aplikasi Anda).
 2.  **Konfigurasi Alamat IP Backend:**
-    - Buka file konfigurasi jaringan (misalnya `NetworkConfig.kt` atau `Constants.kt`).
-    - Ubah `BASE_URL` ke alamat IP lokal komputer Anda (misalnya `http://192.168.1.10:5000/`) agar aplikasi di ponsel/emulator dapat terhubung ke server backend Anda.
-    
+    -   Buka file konfigurasi jaringan (misalnya `NetworkConfig.kt` atau `Constants.kt`).
+    -   Ubah `BASE_URL` ke alamat IP lokal komputer Anda (misalnya `http://192.168.1.10:5000/`) agar aplikasi di ponsel/emulator dapat terhubung ke server backend Anda.
 3.  **Sinkronkan Gradle & Jalankan Aplikasi:**
-    - Biarkan Android Studio menyinkronkan semua dependensi (proses Gradle).
-    - Jalankan aplikasi pada emulator atau perangkat Android fisik.
+    -   Biarkan Android Studio menyinkronkan semua dependensi (proses Gradle).
+    -   Jalankan aplikasi pada emulator atau perangkat Android fisik.
 
-### Detail Model AI
+---
+
+### 🧠 Detail Model AI
 
 Kami menggunakan pendekatan *multi-model* dalam format `.onnx` untuk mencapai fungsionalitas yang komprehensif, dari deteksi cepat hingga identifikasi detail.
 
 1.  **Real-time Detection: YOLOv12n**
-    - **Tujuan**: Deteksi objek sampah secara *real-time* di perangkat mobile.
-    - **Fungsi**: Bertugas sebagai gerbang utama untuk mendeteksi keberadaan sampah dan memberikan klasifikasi dasar (Organik/Anorganik) dengan sangat cepat.
-
+    -   **Tujuan**: Deteksi objek sampah secara *real-time* di perangkat mobile.
+    -   **Fungsi**: Bertugas sebagai gerbang utama untuk mendeteksi keberadaan sampah dan memberikan klasifikasi dasar (Organik/Anorganik) dengan sangat cepat.
 2.  **Klasifikasi Jenis Sampah: MobileNetV2 (CNN)**
-    - **Tujuan**: Klasifikasi yang lebih spesifik setelah objek terdeteksi.
-    - **Fungsi**: Setelah YOLO menandai lokasi sampah, model ini akan menganalisis gambar yang terpotong untuk mengidentifikasi jenisnya secara lebih detail (misalnya: botol plastik, kardus, daun kering, sisa makanan).
-
+    -   **Tujuan**: Klasifikasi yang lebih spesifik setelah objek terdeteksi.
+    -   **Fungsi**: Setelah YOLO menandai lokasi sampah, model ini akan menganalisis gambar yang terpotong untuk mengidentifikasi jenisnya secara lebih detail (misalnya: botol plastik, kardus, daun kering, sisa makanan).
 3.  **Identifikasi via Similaritas: ResNet50**
-    - **Tujuan**: Identifikasi yang sangat spesifik hingga ke level unik atau merek.
-    - **Fungsi**: Model ini mengekstrak *feature embedding* dari gambar sampah untuk dibandingkan dengan database referensi menggunakan *cosine similarity*, memungkinkan pengenalan produk spesifik (misalnya, botol merek X).
+    -   **Tujuan**: Identifikasi yang sangat spesifik hingga ke level unik atau merek.
+    -   **Fungsi**: Model ini mengekstrak *feature embedding* dari gambar sampah untuk dibandingkan dengan database referensi menggunakan *cosine similarity*, memungkinkan pengenalan produk spesifik (misalnya, botol merek X).
 
-### Mengakses Model
+### 📂 Mengakses Model
 
 Model-model pra-terlatih dalam format `.onnx` yang kami gunakan dapat diakses langsung dari repositori ini.
 
@@ -96,7 +142,7 @@ Model-model pra-terlatih dalam format `.onnx` yang kami gunakan dapat diakses la
 
 Pastikan path ke model di dalam kode backend sudah sesuai dengan lokasi Anda menyimpan model.
 
-## Cara Menggunakan Aplikasi
+## 📱 Cara Menggunakan Aplikasi
 
 Alur penggunaan aplikasi dirancang untuk memanfaatkan ketiga model secara berurutan:
 
@@ -104,13 +150,13 @@ Alur penggunaan aplikasi dirancang untuk memanfaatkan ketiga model secara beruru
 2.  **Arahkan Kamera & Lakukan Scan Awal**: Ketuk tombol "Scan Sampah". Model **YOLOv12n** akan secara *real-time* mendeteksi objek dan menampilkan kotak pembatas beserta klasifikasi awalnya (Organik/Anorganik).
 3.  **Dapatkan Detail Klasifikasi**: Setelah objek terdeteksi, aplikasi akan secara otomatis menggunakan model **MobileNetV2** dan **ResNet50** untuk memberikan informasi yang lebih kaya, seperti jenis spesifik sampah.
 4.  **Lihat Info Lengkap & Edukasi**: Hasil analisis detail, dampak lingkungan, dan cara pengelolaan yang benar akan ditampilkan.
-5.  **Kumpulkan Poin**: Setiap pemindaian yang berhasil akan memberikan Anda poin sebagai bentuk apresiasi
+5.  **Kumpulkan Poin**: Setiap pemindaian yang berhasil akan memberikan Anda poin sebagai bentuk apresiasi.
 
-## Tim Pengembang
+## 👥 Tim Pengembang
 
 Proyek "Lensa Lestari" dikembangkan oleh tim Laskar AI LAI25-SM059:
 
-- **I Dewa Gede Mahesta Parawangsa** - (Lead ML Engineer)
-- **I Kadek Ade Indra Swadinata** - (ML Support)
-- **I Putu Wira Budhi Guna Ariyasa** - (Mobile App Developer)
-- **Rizal Teddyansyah** - (Backend Developer & Data Engineer)
+-   **I Dewa Gede Mahesta Parawangsa** - (Lead ML Engineer)
+-   **I Kadek Ade Indra Swadinata** - (ML Support)
+-   **I Putu Wira Budhi Guna Ariyasa** - (Mobile App Developer)
+-   **Rizal Teddyansyah** - (Backend Developer & Data Engineer)
