@@ -1,4 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,170 +25,153 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:text="Hai, User!"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:textColor="#000000"
+                    android:id="@+id/tv_header_name"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="Hai, User!"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:text="Selamat datang di Lensa Lestari"
-                    android:textSize="14sp"
-                    android:textColor="#6A6A6A"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="Selamat datang di Lensa Lestari"
+                    android:textColor="#6A6A6A"
+                    android:textSize="14sp" />
             </LinearLayout>
 
             <ImageView
+                android:id="@+id/iv_profile_icon"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_alignParentEnd="true"
-                android:src="@drawable/baseline_person_24"
-                android:backgroundTint="#FAF6E9"
-                android:tint="@color/primary"
                 android:background="@drawable/circle_background"
+                android:backgroundTint="#FAF6E9"
+                android:contentDescription="Foto Profil"
                 android:scaleType="centerCrop"
-                android:contentDescription="Foto Profil" />
+                android:src="@drawable/baseline_person_24"
+                app:tint="@color/primary" />
         </RelativeLayout>
 
         <!-- TOTAL SAMPAH -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
+            android:layout_marginBottom="12dp"
             android:background="@drawable/rounded_card_total"
-            android:padding="16dp"
-            android:layout_marginBottom="12dp">
+            android:orientation="vertical"
+            android:padding="16dp">
 
             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Total Sampah"
                 android:textColor="@android:color/white"
-                android:textStyle="bold"
                 android:textSize="16sp"
-                android:gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:textStyle="bold" />
 
             <TextView
-                android:text="100"
-                android:textColor="@android:color/white"
-                android:textStyle="bold"
-                android:textSize="32sp"
-                android:gravity="center"
+                android:id="@+id/tv_total_count"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                tools:text="100" />
         </LinearLayout>
 
         <!-- SAMPAH ORGANIK -->
         <LinearLayout
-            android:orientation="vertical"
-            android:padding="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/rounded_card"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:orientation="vertical"
+            android:padding="16dp">
+
             <TextView
-                android:text="Sampah Organik"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#000000"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Sampah Organik"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
             <TextView
-                android:text="25"
+                android:id="@+id/tv_organic_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="#000000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                tools:text="25" />
         </LinearLayout>
 
         <!-- SAMPAH ANORGANIK -->
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:background="@drawable/rounded_card_anorganik"
             android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:padding="16dp">
+
             <TextView
-                android:text="Sampah Anorganik"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#000000"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="Sampah Anorganik"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
             <TextView
-                android:text="75"
+                android:id="@+id/tv_inorganic_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="#000000"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                tools:text="75" />
         </LinearLayout>
 
         <!-- RIWAYAT ANALISIS -->
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
             android:text="Riwayat Analisis"
-            android:textStyle="bold"
             android:textColor="#9CCB65"
             android:textSize="16sp"
-            android:layout_marginTop="24dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:textStyle="bold" />
 
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:text="Analisis Terbaru yang Telah Dilakukan"
             android:textColor="#333333"
-            android:textSize="14sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="12dp" />
+            android:textSize="14sp" />
 
-        <!-- Riwayat Card -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <!-- Progress Bar untuk indikator loading -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/rounded_card_anorganik"
-            android:padding="16dp"
-            android:layout_marginBottom="8dp">
-            <View
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/rounded_white_box" />
-            <TextView
-                android:text="Organik"
-                android:textStyle="bold"
-                android:textColor="#9CCB65"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="12dp"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+            android:layout_gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible" />
 
-        <LinearLayout
+        <!-- RecyclerView untuk daftar riwayat dinamis -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_history"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/rounded_card_anorganik"
-            android:padding="16dp">
-            <View
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:background="@drawable/rounded_white_box" />
-            <TextView
-                android:text="Anorganik"
-                android:textStyle="bold"
-                android:textColor="#000000"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="12dp"
-                android:textSize="16sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_history" />
 
     </LinearLayout>
 </ScrollView>
