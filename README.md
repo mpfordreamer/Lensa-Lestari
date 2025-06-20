@@ -1,4 +1,5 @@
 # Lensa Lestari Overview
+![ChatGPT Image 19 Jun 2025, 13 43 30](https://github.com/user-attachments/assets/e977f264-d225-4004-a44e-3a4710f2bd1a)
 
 ## 💻 Tech Stack
 
